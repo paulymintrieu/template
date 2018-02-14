@@ -1,0 +1,31 @@
+{block:Video}
+<div style="{block:ifnotpostbackgroundtransparent}
+background: {color:posts};
+{/block:ifnotpostbackgroundtransparent}
+{block:ifpostbackgroundtransparent}
+background:transparent;
+{block:ifpostbackgroundtransparent}">
+<div style="padding-top:10px; padding-bottom:8px;">
+{block:IndexPage}
+{block:ifTwoColumns}
+{Video-400}
+{/block:ifTwoColumns}
+{block:ifThreeColumns}
+{Video-250}
+{/block:ifThreeColumns}
+{/block:IndexPage}
+{block:PermalinkPage}{Video-500}{/block:PermalinkPage}
+</div>
+<div style="padding-bottom:5px;">{block:Caption}{Caption}{/block:Caption}</div>
+{block:indexpage}<center><div style="height:1px;background-color:#000; opacity:.2; width:90%; margin-bottom:5px;"></div></center>
+<div align="right" style="padding-right:10px; padding-top:5px; padding-bottom:10px;"><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}
+</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="{Permalink}">{DayOfMonth} {Month}, {Year}
+</a></div>{/block:indexpage}
+</div>
+{block:indexpage}
+{block:indexpage}
+
+{block:permalinkpage}
+{/block:permalinkpage}
+{/block:Video}
+</center>
