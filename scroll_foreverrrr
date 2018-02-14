@@ -1,0 +1,18 @@
+$wall.infinitescroll({
+navSelector    : '#page-nav',
+nextSelector   : '#page-nav a',
+itemSelector   : '#entry, #entry_photo',
+bufferPx       : 2000,
+debug          : false,
+errorCallback: function() {
+$('#infscr-loading').fadeOut('normal');
+}},
+function( newElements ) {
+var $newElems = $( newElements );
+$newElems.hide();
+$newElems.imagesLoaded(function(){
+$wall.masonry( 'appended', $newElems,{isAnimated: false}, function(){$newElems.fadeIn('slow');} );
+});
+}); $('#content').show(500);
+});
+</script>
