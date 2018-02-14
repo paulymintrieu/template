@@ -1,0 +1,190 @@
+body{
+margin:0px;
+background-color: {color:Background};
+background-image:url({image:Background});
+background-attachment: fixed;
+background-repeat: repeat;
+font-size: 13px;
+font-family:{font:Body};
+line-height:15px;
+color:{color:Text};
+}
+
+::-webkit-scrollbar {width: 5px; height: 5px; background: {color:Background}; }
+::-webkit-scrollbar-thumb { background-color: {color:scrollbar}; -webkit-border-radius: 4ex; }
+
+a:link, a:active, a:visited{
+color: {color:Link};
+text-decoration: none;
+-webkit-transition: all 0.6s ease-out;-moz-transition: all 0.6s ease-out;-o-transition: all   0.6s ease-out;transition: all 0.6s ease-out;
+}
+
+a:hover{
+color:{color:Hover};
+text-decoration: none;
+-webkit-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;-o-transition: all   0.3s ease-out;transition: all 0.3s ease-out;
+}
+
+.sidelink{font-style:none;
+font-family: {font:Body};
+font-color: {color:Text};
+text-align: center;
+padding-right:5px;
+text-transform:
+font-size:12px;
+-webkit-transition: all 1.5s linear; -moz-transition: all 1.5s linear; transition: all 1.5s  linear;}
+
+.description{font-style:none;
+font-family: {font:Body};
+font-color: {color:Text};
+text-align: center;
+text-transform:
+font-size:13px;
+}
+
+.sidelink:hover{background-color:rgba(0,0,0,0);
+style: none;
+color:{color:Hover};
+-webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; transition: all 0.2s    linear;}
+.sidelink a:hover{color: {color:Link};
+-webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; transition: all 0.2s   linear;}
+
+iframe#tumblr_controls {position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden}
+
+#posts1{
+{block:ifThreeColumns}
+width:345px;
+height:auto;}
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+width:500px;
+height:auto;}
+{/block:ifTwoColumns}
+{block:PermalinkPage}
+width:600px;
+{/block:PermalinkPage}
+}
+
+
+#posts2{
+padding-top:3px;
+padding-bottom:3px;
+position:fixed !important;
+{block:ifThreeColumns}
+width:345px;
+height:207px;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+width:500px;
+height:207px;
+{/block:ifTwoColumns}
+{block:ifnotpostbackgroundtransparent}
+background: {color:posts};
+{/block:ifnotpostbackgroundtransparent}
+{block:ifpostbackgroundtransparent}
+background:transparent;
+{block:ifpostbackgroundtransparent}
+{block:PermalinkPage}
+width:600px;
+height:207px;
+{/block:PermalinkPage}
+}
+
+#containerr{
+margin:auto;
+top:30px;
+padding-top:15px;
+position:relative;
+{block:indexpage}
+{block:ifThreeColumns}
+width:1090px;
+left:10px;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+width:1090px;
+left:30px;
+{/block:ifTwoColumns}
+{/block:indexpage}
+{block:permalinkpage}
+{block:ifThreeColumns}
+width:1090px;
+left:90px;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+width:1090px;
+left:96px;
+{/block:ifTwoColumns}
+{/block:permalinkpage}
+overflow:hidden;
+}
+
+
+#container .topbanner {
+z-index:999999999999999;
+top: 0px;
+width: 900px;
+height: auto;
+background-color: transparent;
+}
+
+
+#posts{
+{block:indexpage}
+{block:ifThreeColumns}
+width:1080px;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+width:1100px;
+{/block:ifTwoColumns}
+{/block:indexpage}
+{block:permalinkpage}
+width:800px;
+{/block:permalinkpage}
+}
+
+
+
+#entry{
+z-index:9999;
+border:0px solid;
+border-color: #FFFFF1;
+float: left;
+{block:ifThreeColumns}
+width:345px;
+height:auto;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+width:500px;
+height:auto;
+{/block:ifTwoColumns}
+background-color:transparent;
+{block:PermalinkPage}
+width: 600px;
+height: auto;
+{/block:PermalinkPage}
+line-height:8px;
+padding:0px;
+margin-right:10px;
+margin-bottom:10px;
+overflow:hidden;
+}
+
+
+#entry img{
+{block:IndexPage}
+{block:ifThreeColumns}
+max-width: 345px;
+height: auto;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+max-width: 500px;
+height: auto;
+{/block:ifTwoColumns}
+{/block:IndexPage}
+{block:PermalinkPage}
+max-width: 600px;
+height: auto;
+{/block:PermalinkPage}
+}
+
+
