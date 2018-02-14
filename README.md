@@ -1,1 +1,1 @@
-# templates
+# Blog Template
