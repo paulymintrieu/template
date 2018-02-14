@@ -1,0 +1,194 @@
+</style>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}" />
+<meta name="viewport" content="width=720" />
+</head>
+<body>
+
+<script src="http://static.tumblr.com/6jwx45k/9Ivm1xjuj/infintescroll.txt" type="text/javascript"></script>
+
+<div id="containerr">
+<div class="topbanner" style="overflow:hidden;
+{block:ifThreeColumns}
+margin-left:-20px;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+margin-left:-70px;
+{/block:ifTwoColumns}
+
+{block:permalinkpage}
+{block:ifThreeColumns}
+margin-right:178px;
+{/block:ifThreeColumns}
+{block:ifTwoColumns}
+margin-right:120px;
+{/block:ifTwoColumns}
+{block:permalinkpage}">
+
+<center>
+{block:IfbannerImage}<a href="/"><img style="max-width:800px; max-height:300px; margin-bottom:5px;" src="{image:Banner}"></a><br>{/block:IfbannerImage}
+
+{block:IfnotbannerImage}
+<div style="text-align:center;"><h2 class="bebas"><a href="/">{title}</a></h2></div>
+
+{/block:IfnotbannerImage}
+
+<div style="text-align: center;text-transform: none;">
+{block:ifshowdefaultlinks}
+
+
+<br>
+<center>            
+<font size= "4"> <font face= "American Typewriter">
+<div style="text-align: center;text-transform: lowercase;">
+<font size= "1.2"> <font face= "American Typewriter">
+
+<a href="/" class="link">Homepage</a>
+<a href="/link1" class="link"> link1;</a>
+<a href="link2" class="link">link2;</a>
+{/block:ifshowdefaultlinks}
+
+{block:ifLinkOneTitle}
+<a href="{text:Link One}" class="link">{text:Link One Title}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+{/block:ifLinkOneTitle}
+{block:ifLinkTwoTitle}
+<a href="{text:Link Two}" class="link">{text:Link Two Title}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+{/block:ifLinkTwoTitle}
+{block:ifLinkThreeTitle}
+<a href="{text:Link Three}" class="link">{text:Link Three Title}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+{/block:ifLinkThreeTitle}
+{block:ifLinkFourTitle}
+<a href="{text:Link Four}" class="link">{text:Link Four Title}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+{/block:ifLinkFourTitle}
+{block:ifLinkFiveTitle}
+<a href="{text:Link Five}" class="link">{text:Link Five Title}&nbsp;&nbsp;&nbsp;&nbsp;</a>
+{/block:ifLinkFiveTitle}
+
+{block:HasPages}{block:Pages}<a href="{URL}" class="link">{Label}&nbsp;&nbsp;&nbsp;&nbsp;</a> {/block:Pages} {/block:HasPages}
+
+
+</div>
+{block:IfShowBlogDescription}
+<p>{Description}</p>{/block:IfShowBlogDescription}<br>
+
+
+</center>
+
+</div>
+</div>
+
+<div id="posts2">
+<div id="containerr">
+<div id="sidebarr">
+</div>
+</center>
+
+<div id="pagination">
+<div align="center">
+
+<div id="posts">
+
+{block:Posts}
+<div id="entry">
+{block:Photo}
+{block:IndexPage}
+<div id="posts1">
+<a href="{permalink}">
+<img src="{PhotoURL-500}" alt="{PhotoAlt}"  width={block:ifThreeColumns}345{/block:ifThreeColumns}{block:ifTwoColumns}500{/block:ifTwoColumns}; style=""></a>
+</div>
+{/block:IndexPage}
+
+{block:PermalinkPage}
+{LinkOpenTag}<center><img src="{PhotoURL-500}" alt="{PhotoAlt}"width=600px; style="border="0">
+</center>
+{/block:PermalinkPage}
+{/block:Photo}
+
+{block:Photoset}
+<div style="{block:ifnotpostbackgroundtransparent}
+background: {color:posts};
+{/block:ifnotpostbackgroundtransparent}
+{block:ifpostbackgroundtransparent}
+background:transparent;
+{block:ifpostbackgroundtransparent}">
+<div style="padding:5px">
+{block:IndexPage}
+{block:ifTwoColumns}
+{Photoset-500}
+{/block:ifTwoColumns}
+{block:ifThreeColumns}
+{Photoset-250}
+{/block:ifThreeColumns}
+{/block:IndexPage}
+{block:PermalinkPage}{Photoset-500}{/block:PermalinkPage}</div>
+{block:indexpage}<div style="height:1px;background-color:#000; opacity:.2; width:90%; margin-bottom:5px;"></div>
+
+</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="{Permalink}">{DayOfMonth} {Month}, {Year}
+</a></div>{/block:indexpage}
+</div>
+{block:IndexPage}
+{/block:IndexPage}
+{block:PermalinkPage}
+{/block:PermalinkPage}
+{/block:Photoset}
+
+{block:Text}
+<div style="{block:ifnotpostbackgroundtransparent}
+background: {color:posts};
+{/block:ifnotpostbackgroundtransparent}
+{block:ifpostbackgroundtransparent}
+background:transparent;
+{block:ifpostbackgroundtransparent}">
+<div style="padding-top:15px; padding-bottom:10px; padding-left:10px; padding-right:10px;">
+{block:Title}
+<a href="{permalink}"><span class="title">{Title}</span></a>
+{/block:Title}
+<span class="entrytext" style="line-height:12px;">{Body}</span>
+<a href="{Permalink}"></a></div>
+{block:indexpage}<center><div style="height:1px;background-color:#000; opacity:.2; width:90%; margin-bottom:5px;"></div></center>
+
+<div align="right" style="padding-right:10px; padding-top:5px; padding-bottom:10px;"><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}
+</a>&nbsp;&nbsp;-&nbsp;&nbsp;{block:ifShowTimeAgoOnPosts}
+<a href="{permalink}">{TimeAgo}</a>
+{/block:ifShowTimeAgoOnPosts}
+{block:ifnotShowTimeAgoOnPosts}
+<a href="{permalink}">{DayOfMonth} {Month} {Year}</a>
+{block:ifnotShowTimeAgoOnPosts}</div>{/block:indexpage}
+</div>
+
+{block:IndexPage}
+{/block:IndexPage}
+{block:PermalinkPage}
+{/block:PermalinkPage}
+{/block:Text}
+
+{block:Link}
+<div style="{block:ifnotpostbackgroundtransparent}
+background: {color:posts};
+{/block:ifnotpostbackgroundtransparent}
+{block:ifpostbackgroundtransparent}
+background:transparent;
+{block:ifpostbackgroundtransparent}">
+<div style="padding-top:15px; padding-bottom:0px;>
+<a href="{URL}"><span class="title">{Name}</span></a></div>
+{block:BlogDescription}<span class="entrytext" style="line-height:12px;">{Description}</span>{/block:BlogDescription}</a>
+{block:Caption}<a href="{URL}">{Caption}</a>{/block:Caption}<div style="padding-top:0px; padding-bottom:3px;"></a></div>
+{block:indexpage}<br><center><div style="height:1px;background-color:#000; opacity:.2; width:90%; margin-bottom:5px;"></div></center>
+<div align="right" style="padding-right:10px; padding-top:5px; padding-bottom:10px;"><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}
+</a>&nbsp;&nbsp;-&nbsp;&nbsp;{block:ifShowTimeAgoOnPosts}
+<a href="{permalink}">{TimeAgo}</a>
+{/block:ifShowTimeAgoOnPosts}
+{block:ifnotShowTimeAgoOnPosts}
+<a href="{permalink}">{DayOfMonth} {Month} {Year}</a>
+{block:ifnotShowTimeAgoOnPosts}</div>{/block:indexpage}
+</div>
+{/block:Link}
+
+{/block:indexpage}
+<div><div><div><div>
+</body>
+</html>
+
+
+
+
